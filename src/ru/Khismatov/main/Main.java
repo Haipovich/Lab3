@@ -36,7 +36,7 @@ public class Main {
                     System.out.println("Only name: " + only_first_name);
                     try {
                         Name invalid_name = new Name("", "", "");
-                    } catch (IllegalStateException e) {
+                    } catch (IllegalArgumentException e) {
                         System.out.println("Error: " + e.getMessage());
                     }
                     break;
@@ -59,10 +59,13 @@ public class Main {
                     }
                     break;
                 case 4:
-                    Calculator calc = new Calculator();
-                    System.out.println("2 + 3/5 + 2.3 = " + Calculator.sum(2, new Fraction(3, 5), 2.3));
-                    System.out.println("3.6 + 49/12 + 3 + 3/2 = " + Calculator.sum(3.6, new Fraction(49, 12), 3, new Fraction(3, 2)));
-                    System.out.println("1/3 + 1 = " + Calculator.sum(new Fraction(1, 3), 1));
+                    ICalculator calc = new Calculator();
+                    double result1 = calc.sum(2, new Fraction(3, 5), 2.3);
+                    System.out.println("2 + 3/5 + 2.3 = " + result1);
+                    double result2 = calc.sum(3.6, new Fraction(49, 12), new Fraction(3, 2));
+                    System.out.println("3.6 + 49/12 + 3/2 = " + result2);
+                    double result3 = calc.sum(new Fraction(1, 3), 1);
+                    System.out.println("1/3 + 1 = " + result3);
                     break;
                 case 5:
                     System.out.println("Enter 2 fractions(1 5 is mean 1/5): ");
@@ -85,7 +88,7 @@ public class Main {
                     System.out.println("Original: " + original);
                     System.out.println("Cloned: " + cloned);
                     System.out.println("Fractions have equals value: "+ original.equals(cloned));
-                    System.out.println("Fractions is same objects: "  + (original == cloned));
+                    System.out.println("Fractions is same objects: "  + (original.getClass() == cloned.getClass()));
                     break;
             }
             System.out.println("Enter the number of task(8 is exit): ");
