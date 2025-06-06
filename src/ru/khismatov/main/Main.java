@@ -1,10 +1,26 @@
 package ru.khismatov.main;
 
 import java.util.Scanner;
-import ru.khismatov.data.*;
-import ru.khismatov.math.*;
+import ru.khismatov.data.Name;
+import ru.khismatov.math.Calculator;
+import ru.khismatov.math.Fraction;
+import ru.khismatov.math.ICalculator;
 import ru.khismatov.secret.Secret;
 
+/**
+ * Главный класс программы, демонстрирующий работу всех реализованных классов.
+ * Содержит интерактивное меню для выбора демонстрации различных функций.
+ * 
+ * Доступные демонстрации:
+ * 1. Работа с дробями (Fraction)
+ * 2. Работа с именами (Name)
+ * 3. Работа с секретами (Secret)
+ * 4. Работа с калькулятором (Calculator)
+ * 5. Сравнение дробей
+ * 6. Возведение в степень
+ * 7. Клонирование дробей
+ * 8. Выход из программы
+ */
 public class Main {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
