@@ -47,10 +47,20 @@ public class Secret {
   public Secret(String secret, String name_guard) {
     if (name_guard == null || name_guard.isEmpty()) {
       System.out.println("Error: Name guard cannot be empty or null");
+      this.secret = null;
+      this.name_guard = null;
+      this.order = 0;
+      this.next_guard = null;
+      this.previous_guard = null;
       return;
     }
     if (secret == null || secret.isEmpty()) {
       System.out.println("Error: Secret text cannot be empty or null");
+      this.secret = null;
+      this.name_guard = null;
+      this.order = 0;
+      this.next_guard = null;
+      this.previous_guard = null;
       return;
     }
     this.secret = secret;
@@ -71,14 +81,29 @@ public class Secret {
   public Secret(Secret previous_guard, String name_guard) {
     if (name_guard == null || name_guard.isEmpty()) {
       System.out.println("Error: Name guard cannot be empty or null");
+      this.secret = null;
+      this.name_guard = null;
+      this.order = 0;
+      this.next_guard = null;
+      this.previous_guard = null;
       return;
     }
     if (previous_guard == null) {
       System.out.println("Error: Previous guard cannot be null");
+      this.secret = null;
+      this.name_guard = null;
+      this.order = 0;
+      this.next_guard = null;
+      this.previous_guard = null;
       return;
     }
     if (previous_guard.next_guard != null) {
       System.out.println("Error: The secret has already been passed on to another guard");
+      this.secret = null;
+      this.name_guard = null;
+      this.order = 0;
+      this.next_guard = null;
+      this.previous_guard = null;
       return;
     }
     this.name_guard = name_guard;

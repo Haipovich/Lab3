@@ -30,6 +30,9 @@ public class Name {
         && is_null_or_empty(first_name)
         && is_null_or_empty(middle_name)) {
       System.out.println("Error: At least one name parameter must not be empty");
+      this.last_name = null;
+      this.first_name = null;
+      this.middle_name = null;
       return;
     }
     this.last_name = last_name;

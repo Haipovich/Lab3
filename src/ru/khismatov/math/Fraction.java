@@ -49,6 +49,8 @@ public final class Fraction extends Number implements Cloneable {
   public Fraction(int numerator, int denominator) {
     if (denominator == 0) {
       System.out.println("Error: Denominator cannot be zero");
+      this.numerator = 0;
+      this.denominator = 1;
       return;
     }
     int nod = nod(Math.abs(numerator), Math.abs(denominator));
