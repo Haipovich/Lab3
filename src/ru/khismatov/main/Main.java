@@ -1,6 +1,7 @@
 package ru.khismatov.main;
 
 import java.util.Scanner;
+
 import ru.khismatov.data.Name;
 import ru.khismatov.math.Calculator;
 import ru.khismatov.math.Fraction;
