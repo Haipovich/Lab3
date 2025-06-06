@@ -9,7 +9,8 @@
  *
  * - Задание 10: Возведение в степень.
  *   - Содержит метод для возведения числа X в степень Y, где X и Y передаются как строки.
- *   - Использует короткие имена статических методов для Integer#parseInt(String) и Math#pow(double, double).
+ *   - Использует короткие имена статических методов для Integer#parseInt(String) и
+ *   Math#pow(double, double).
  */
 
 package ru.khismatov.math;
